@@ -514,6 +514,32 @@ Gets the Tooltip current target.
       });
     </script>
 
+### destroy
+
+Destroys the Tooltip.
+
+#### Example - manually close the Tooltip
+
+    <div id="container">
+      <span title="Tooltip content">Tooltip target</span>
+    </div>
+
+    <button id="destroyTooltip" class="k-button">Destroy tooltip</button>
+
+    <script>
+      $(document).ready(function() {
+        var tooltip = $("#container").kendoTooltip({
+          filter: "span",
+          autoHide: false,
+          position: "right"
+        }).data("kendoTooltip");
+
+        $("#destroyTooltip").click(function() {
+          tooltip.destroy();
+        });
+      });
+    </script>
+    
 #### Returns
 
 `jQuery` The target element or null.
